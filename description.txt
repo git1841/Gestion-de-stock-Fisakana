@@ -1,0 +1,72 @@
+
+
+
+
+hira
+virtual DJ 
+Ubuntu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gestion de stock de marchandise : 
+un marchandise de plusieur sous antité, on veux crrer un application
+
+1 stockage principales
+plusieur sous antiter
+
+application : 
+    pour ajouter le produit arriver au stockage principale
+    pour transfer cette produit au sous antiter (le produit dans le stokage principale dimunis) (dans le meme application mais pas en ligne)
+    pour marquer le produit vendus dans le sous antiter
+    pour afficher le statique de taux d'accoissement de l'entreprise de vente par de graphe
+
+les produit  avoir de : date d'arriver au stockage principale
+                        prix d'arriver (prix leur achas)
+                        prix pour le vendre, 
+                        date de sortie sur le stockage principale
+
+
+donner le code tranferer.fxml et controllerTranfer.java pour faire marcher cette fonctionnaliter
+
+diviser en deux le page :
+
+a gauche : lister le produit dans le stokprincipale
+
+a droite : liste de sousentite 
+
+fonctionnaliter : 
+on va preparer le produit a tranferer a droite 
+    par exmple au va prepare de tranferer 10 bouteille de huille vert le autre sous entiter
+    pour le deplacer on va juste glisser cette produit ver le sousentite a droite, le stockage de cette sousentiter serra augmenter automatiquement
+
+
+
+
+
+
+
+
+
+
+    
+<stylesheets>
+        <URL value="@/src/main/resources/com/votreport/views/styles.css" />
+    </stylesheets>

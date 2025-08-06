@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.votreport.controllers.AjouteProduitSousEntiteController" spacing="10"
+      style="-fx-padding: 10;" prefHeight="600" prefWidth="800">
+
+
+
+   <SplitPane dividerPositions="0.5" prefHeight="500" prefWidth="800">
+        <items>
+            <!-- Partie gauche : Stock Principal -->
+            <VBox spacing="10" style="-fx-padding: 10;" prefHeight="500">
+            
+                <Label text="Stock Principal" styleClass="section-title"/>
+                <TableView fx:id="stockPrincipalTable" prefHeight="400" prefWidth="600">
+                    <columns>
+                        <TableColumn text="Produit" prefWidth="150">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="designation" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Référence" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="reference" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Quantité" prefWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="quantite" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </VBox>
+            
+            <!-- Partie droite : Stock Sous-entité -->
+            <VBox spacing="10">
+                <Label text="Stock Sous-entité" styleClass="section-title"/>
+                <TableView fx:id="stockSousEntiteTable">
+                    <columns>
+                        <TableColumn text="Produit" prefWidth="150">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="designation" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Référence" prefWidth="100">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="reference" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Quantité" prefWidth="80">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="quantite" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </VBox>
+        </items>
+    </SplitPane>
+    
+
+</VBox>

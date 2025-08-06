@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+
+<!-- ✅ CECI EST ESSENTIEL POUR fx:String -->
+<?import javafx.fxml.FXMLLoader?>
+<?import javafx.fxml.FXML?>
+<?import javafx.fxml.JavaFXBuilderFactory?>
+<?import javafx.util.*?>
+<?import java.lang.*?>
+
+<?import java.lang.String?>
+
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.votreport.controllers.VenteController" stylesheets="@acc.css">
+    <top>
+        <HBox styleClass="header" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+            <Label text="Enregistrement des Ventes" styleClass="header-title"/>
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" styleClass="content-pane">
+            <HBox spacing="10" styleClass="filter-pane">
+                <Label text="Filtrer par:"/>
+                
+                <ComboBox fx:id="filterTypeComboBox" promptText="Type de filtre">
+                    <items>
+                         <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Produit"/>
+                        <String fx:value="Sous-entité"/>
+                        <String fx:value="Quantité"/>
+                        <String fx:value="Prix unitaire"/>
+                        <String fx:value="Date de vente"/>
+                        <String fx:value="Entre deux dates"/>
+                    </FXCollections>
+                    </items>
+                </ComboBox>
+                
+                <TextField fx:id="filterValueTextField" promptText="Valeur"/>
+                <DatePicker fx:id="startDatePicker" promptText="Date de début" visible="false"/>
+                <DatePicker fx:id="endDatePicker" promptText="Date de fin" visible="false"/>
+                <Button text="Appliquer Filtre" onAction="#applyFilter"/>
+                <Button text="Réinitialiser" onAction="#resetFilter"/>
+            </HBox>
+            
+            <TableView fx:id="ventesTable" styleClass="ventes-table">
+                <columns>
+                    <TableColumn fx:id="colIdVente" text="ID"/>
+                    <TableColumn fx:id="colProduit" text="Produit"/>
+                    <TableColumn fx:id="colSousEntite" text="Sous-entité"/>
+                    <TableColumn fx:id="colQuantite" text="Quantité"/>
+                    <TableColumn fx:id="colPrixUnitaire" text="Prix unitaire"/>
+                    <TableColumn fx:id="colMontantTotal" text="Montant total"/>
+                    <TableColumn fx:id="colDateVente" text="Date de vente"/>
+                    <TableColumn fx:id="colVenduPar" text="Vendu par"/>
+                </columns>
+            </TableView>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="summary-pane">
+                <Label text="Montant total: "/>
+                <Label fx:id="totalAmountLabel" text="0.00 €" styleClass="total-label"/>
+                <Button text="Diagramme" onAction="#showChart" styleClass="chart-button"/>
+            </HBox>
+            
+            <VBox fx:id="chartContainer" styleClass="chart-container" visible="false">
+                <BarChart fx:id="salesChart" title="Ventes par produit">
+                    <xAxis>
+                        <CategoryAxis fx:id="xAxis" label="Produit"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxis" label="Montant total"/>
+                    </yAxis>
+                </BarChart>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

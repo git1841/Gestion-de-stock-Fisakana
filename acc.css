@@ -1,0 +1,420 @@
+/* Variables pour les thèmes */
+.theme-dark {
+    -fx-background-color: linear-gradient(to bottom, #0D0D0D, #1A1A1A);
+    -fx-primary-color: #1E88E5;
+    -fx-primary-hover: linear-gradient(to right, #1565C0, #1E88E5);
+    -fx-accent-color: #FFD700;
+    -fx-text-color: #FFFFFF;
+    -fx-secondary-text-color: #B0BEC5;
+    -fx-card-bg: #1E1E1E;
+    -fx-sidebar-bg: linear-gradient(to bottom, #1A1A1A, #121212);
+    -fx-header-bg: #151515;
+}
+
+.theme-light {
+    -fx-background-color: linear-gradient(to bottom, #F0F4F8, #D9E2EC);
+    -fx-primary-color: #0288D1;
+    -fx-primary-hover: linear-gradient(to right, #0277BD, #039BE5);
+    -fx-accent-color: #0288D1;
+    -fx-text-color: #212121;
+    -fx-secondary-text-color: #546E7A;
+    -fx-card-bg: #FFFFFF;
+    -fx-sidebar-bg: linear-gradient(to bottom, #F0F4F8, #CFD8DC);
+    -fx-header-bg: #E3EAF0;
+}
+
+/* Style général */
+.root {
+    -fx-font-family: "Roboto", "Segoe UI", "Arial", sans-serif;
+    -fx-transition: background-color 0.5s ease;
+}
+
+/* Style de l'en-tête */
+.header {
+    -fx-background-color: -fx-header-bg;
+    -fx-padding: 15 20;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-accent-color;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0, 0, 2);
+}
+
+.header-title {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+/* Style du bouton de thème */
+.theme-button {
+    -fx-background-color: -fx-accent-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 16px;
+    -fx-padding: 8;
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+    -fx-background-color: -fx-primary-hover;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 3);
+}
+
+/* Style de la barre latérale */
+.sidebar {
+    -fx-background-color: -fx-sidebar-bg;
+    -fx-min-width: 240px;
+    -fx-max-width: 240px;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0, 2, 0);
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: -fx-accent-color;
+}
+
+.sidebar-title {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 20px;
+    -fx-padding: 15 0 30 10;
+    -fx-font-weight: bold;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-secondary-text-color;
+}
+
+/* Style des boutons de la barre latérale */
+.sidebar-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 16px;
+    -fx-padding: 14 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-alignment: center-left;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: -fx-primary-hover;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 3);
+}
+
+/* Style du contenu principal */
+.main-content {
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+    -fx-padding: 40;
+}
+
+.welcome-label {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0;
+}
+
+.subtitle-label {
+    -fx-text-fill: -fx-secondary-text-color;
+    -fx-font-size: 18px;
+    -fx-padding: 5 0 25 0;
+}
+
+/* Style des cartes d'information */
+.info-card {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 14;
+    -fx-padding: 25;
+    -fx-alignment: center;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+    -fx-transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 14, 0, 0, 4);
+}
+
+.card-title {
+    -fx-text-fill: -fx-secondary-text-color;
+    -fx-font-size: 15px;
+}
+
+.card-value {
+    -fx-text-fill: -fx-text-color;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+
+
+.form-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.form-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+}
+
+
+
+
+.new-product-table {
+    -fx-pref-height: 50px;
+}
+
+.form-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0 5px 0;
+}
+
+/* Styles pour les tables */
+
+.new-product-container {
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 20px 0;
+}
+
+.new-product-table {
+    -fx-pref-height: 50px;
+    -fx-pref-width: 600px;
+}
+
+/* Styles pour les titres */
+.form-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0 5px 0;
+    -fx-text-fill: #333333;
+}
+
+/* Styles pour les cellules */
+.table-view .table-cell {
+    -fx-padding: 5px;
+    -fx-border-color: transparent transparent #eeeeee transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #dddddd;
+    -fx-font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Pour le conteneur principal */
+.ajouter-content {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+}
+
+/* Pour le TableView */
+.products-table {
+    -fx-pref-height: 100%;
+    -fx-pref-width: 100%;
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: white;
+}
+
+/* Colonnes */
+.table-view .column-header {
+    -fx-background-color: #f5f5f5;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #e0e0e0;
+}
+
+
+/* Dans acc.css */
+VBox {
+    -fx-padding: 10px;
+    -fx-background-color: white;
+}
+
+TableView {
+    -fx-pref-height: 100%;
+    -fx-pref-width: 100%;
+}
+
+
+/* Dans transferer.fxml ou acc.css */
+.stock-table {
+    -fx-pref-height: 400px;
+    -fx-pref-width: 600px;
+    -fx-background-color: red; /* Couleur de test */
+    -fx-opacity: 1;
+    -fx-border-width: 2px;
+    -fx-border-color: blue;
+}
+
+
+
+
+/* Styles pour la TableView */
+
+
+/* Styles pour les panneaux gauche/droite */
+.left-pane, .right-pane {
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* Styles pour les ListView */
+.sousentite-list, .transfer-list {
+    -fx-pref-height: 200px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+/* Styles pour les colonnes de la table */
+.table-column {
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-size: 14px;
+}
+
+
+
+
+
+
+/* Styles pour les boutons de suppression */
+.delete-button {
+    -fx-background-color: #ff6b6b;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.delete-button:hover {
+    -fx-background-color: #ff5252;
+}
+
+/* Styles pour la colonne description */
+#colDescription .table-cell {
+    -fx-padding: 5;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Ajustement de la table */
+.products-table {
+    -fx-font-size: 14px;
+}
+
+.products-table .table-row-cell {
+    -fx-cell-size: 40px;
+}
+
+
+
+
+.form-container {
+    -fx-padding: 20;
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.form-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.form-field {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 35px;
+    -fx-font-size: 14px;
+}
+
+.submit-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200px;
+}
+
+.cancel-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 200px;
+}
+
+/* Styles pour la vue des ventes */
+.content-pane {
+    -fx-padding: 20px;
+}
+
+.filter-pane {
+    -fx-padding: 10px;
+    -fx-background-color: #f5f5f5;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+}
+
+.summary-pane {
+    -fx-padding: 15px;
+    -fx-background-color: #e8f5e9;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #c8e6c9;
+    -fx-border-width: 1px;
+}
+
+.total-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2e7d32;
+}
+
+.chart-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px;
+}
+
+.chart-button:hover {
+    -fx-background-color: #0b7dda;
+}
+
+.chart-container {
+    -fx-padding: 20px;
+    -fx-background-color: #fafafa;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+}
+
+.ventes-table .table-row-cell {
+    -fx-cell-size: 35px;
+}
+
+.ventes-table .table-column {
+    -fx-alignment: CENTER;
+}

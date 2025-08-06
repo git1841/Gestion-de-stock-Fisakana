@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.votreport.controllers.SousEntiteController" spacing="10">
+    
+    <TableView fx:id="sousEntiteTable" editable="true" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colNom" text="Nom" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nom" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colAdresse" text="Adresse" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="adresse" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colResponsable" text="Responsable" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="responsable" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="80" />
+        </columns>
+    </TableView>
+    
+
+</VBox>

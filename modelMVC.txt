@@ -1,0 +1,18 @@
+
+
+
+src/
+└── main/
+    ├── java/
+    │   └── com/
+    │       └── votreport/  # Exactement comme vous l'avez écrit
+    │           ├── controllers/
+    │           │   └── MainController.java
+    │           ├── models/
+    │           └── App.java
+    └── resources/
+        └── com/
+            └── votreport/
+                └── views/
+                    ├── main.fxml
+                    └── acc.css
